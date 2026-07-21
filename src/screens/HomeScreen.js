@@ -44,9 +44,9 @@ export default function HomeScreen({ navigation }) {
               </View>
             </View>
 
-            <View style={[styles.divider, { marginTop: 18 }]} />
+            <View style={[styles.divider, { marginTop: 10 }]} />
             <View style={styles.cardBtnWrap}>
-              <CardPillButton title="Quiero una cuenta" onPress={() => {}} />
+              <CardPillButton title="Quiero una cuenta" style={{ width: 250, paddingVertical: 14,paddingHorizontal: 40 }} onPress={() => {}} />
             </View>
           </View>
 
@@ -64,7 +64,7 @@ export default function HomeScreen({ navigation }) {
 
             <View style={styles.divider} />
             <View style={styles.cardBtnWrap}>
-              <CardPillButton title="Quiero otro CDT" onPress={() => {}} />
+              <CardPillButton title="Quiero otro CDT" style={{width: 250}} onPress={() => {}} />
             </View>
           </View>
         </ScrollView>
@@ -91,18 +91,18 @@ function renderPromo(promo) {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.white },
-  lastBar: { backgroundColor: colors.bar, paddingVertical: 8, paddingHorizontal: 20 },
-  lastText: { fontFamily: fonts.regular, fontSize: 14, color: colors.grayText },
+  lastBar: { backgroundColor: colors.bar, paddingVertical: 5, paddingHorizontal: 20 },
+  lastText: { fontFamily: fonts.regular, fontSize: 14, color: colors.grayText, letterSpacing: -0.5 },
   loader: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   content: { padding: 20, paddingBottom: 30 },
-  card: { backgroundColor: colors.yellow, borderRadius: radius.card, paddingVertical: 22, paddingHorizontal: 20 },
-  cardHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 14 },
+  card: { backgroundColor: colors.yellow, borderRadius: radius.card, paddingVertical: 15, paddingHorizontal: 20 },
+  cardHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 7 },
   cardIcon: { position: 'absolute', left: 0 },
-  cardTitle: { fontFamily: fonts.semibold, fontSize: 22, color: colors.navy },
-  divider: { height: 1, backgroundColor: 'rgba(10,27,77,0.25)' },
+  cardTitle: { fontFamily: fonts.regular, fontSize: 17, color: colors.navy },
+  divider: { height: 1, backgroundColor: 'rgba(246, 247, 250, 0.98)' },
   saldoLabel: { fontFamily: fonts.bold, fontSize: 15, color: colors.navy, textAlign: 'center', marginTop: 16 },
-  saldo: { fontFamily: fonts.bold, fontSize: 36, color: colors.navy, textAlign: 'center', marginTop: 6 },
-  accName: { fontFamily: fonts.regular, fontSize: 20, color: colors.navy, textAlign: 'center', marginTop: 8 },
+  saldo: { fontFamily: fonts.bold, fontSize: 28,marginBottom: 0, color: colors.navy, textAlign: 'center', marginTop: 6, letterSpacing: -2 },
+  accName: { fontFamily: fonts.regular, fontSize: 20, color: colors.navy, textAlign: 'center', marginTop: 0 },
   estado: { fontFamily: fonts.regular, fontSize: 14, color: colors.navy, textAlign: 'center', marginTop: 8 },
   estadoBold: { fontFamily: fonts.bold },
   numRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 6 },
@@ -111,6 +111,6 @@ const styles = StyleSheet.create({
     marginLeft: 8, width: 20, height: 20, borderRadius: 10,
     borderWidth: 1, borderColor: colors.navy, alignItems: 'center', justifyContent: 'center',
   },
-  cardBtnWrap: { alignItems: 'center', marginTop: 18 },
-  promo: { fontFamily: fonts.regular, fontSize: 18, color: colors.navy, textAlign: 'center', lineHeight: 26, marginVertical: 18 },
+  cardBtnWrap: { alignItems: 'center', marginTop: 15 },
+  promo: { fontFamily: fonts.regular, fontSize: 18, color: colors.navy, textAlign: 'center', lineHeight: 26, marginVertical: 15 },
 });
