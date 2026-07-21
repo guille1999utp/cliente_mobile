@@ -1,5 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 import { colors, fonts } from '../theme';
 import Logo from './Logo';
 
@@ -14,7 +14,7 @@ export default function Header({ variant = 'title', title, onBack, onMenu, onMai
           <Logo size={26} circle={17} />
           <View style={styles.rightRow}>
             <Pressable hitSlop={10} onPress={onMail} style={styles.iconBtn}>
-              <Feather name="mail" size={26} color={colors.navy} />
+              <MaterialCommunityIcons name="email-outline" size={27} color={colors.navy} />
             </Pressable>
             <Pressable hitSlop={10} onPress={onMenu} style={styles.iconBtn}>
               <Feather name="menu" size={28} color={colors.navy} />

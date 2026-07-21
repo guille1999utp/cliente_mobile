@@ -46,7 +46,7 @@ export default function HomeScreen({ navigation }) {
 
             <View style={[styles.divider, { marginTop: 10 }]} />
             <View style={styles.cardBtnWrap}>
-              <CardPillButton title="Quiero una cuenta" style={{ width: 250, paddingVertical: 14,paddingHorizontal: 40 }} onPress={() => {}} />
+              <CardPillButton title="Quiero una cuenta" style={{ width: 250, paddingVertical: 10,paddingHorizontal: 40 }} onPress={() => {}} />
             </View>
           </View>
 
@@ -64,7 +64,7 @@ export default function HomeScreen({ navigation }) {
 
             <View style={styles.divider} />
             <View style={styles.cardBtnWrap}>
-              <CardPillButton title="Quiero otro CDT" style={{width: 250}} onPress={() => {}} />
+              <CardPillButton title="Quiero otro CDT" style={{width: 250, paddingVertical: 10}} onPress={() => {}} />
             </View>
           </View>
         </ScrollView>
@@ -112,5 +112,5 @@ const styles = StyleSheet.create({
     borderWidth: 1, borderColor: colors.navy, alignItems: 'center', justifyContent: 'center',
   },
   cardBtnWrap: { alignItems: 'center', marginTop: 15 },
-  promo: { fontFamily: fonts.regular, fontSize: 18, color: colors.navy, textAlign: 'center', lineHeight: 26, marginVertical: 15 },
+  promo: { fontFamily: fonts.regular, fontSize: 15, color: colors.navy, textAlign: 'center', lineHeight: 26, marginVertical: 15 },
 });
