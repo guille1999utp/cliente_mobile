@@ -64,8 +64,8 @@ export default function TransferenciasScreen({ navigation }) {
 
         <View style={{ flex: 1 }} />
 
-        <PrimaryButton title="Continuar" onPress={() => {}} />
-        <OutlineButton title="Mis transferencias" onPress={() => {}} style={{ marginTop: 16 }} />
+        <PrimaryButton title="Continuar" style={{ paddingBottom: 10, paddingTop: 10 }} onPress={() => {}} />
+        <OutlineButton title="Mis transferencias"  onPress={() => {}} style={{ marginTop: 16 , paddingBottom: 10, paddingTop: 10}} />
       </View>
 
       <BottomTabBar navigation={navigation} />
@@ -77,13 +77,13 @@ const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.white },
   body: { flex: 1, paddingHorizontal: 22, paddingTop: 10, paddingBottom: 12 },
   field: { marginTop: 22 },
-  label: { fontFamily: fonts.regular, fontSize: 18, color: colors.navy, marginBottom: 8 },
+  label: { fontFamily: fonts.semibold, fontSize: 13, color: colors.navy, marginBottom: 8, letterSpacing: -0.5 },
   dropdownLine: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
-    borderBottomWidth: 1, borderBottomColor: colors.grayLine, paddingBottom: 8,
+    borderBottomWidth: 1, borderBottomColor: colors.grayLine, paddingBottom: 4,
   },
-  placeholder: { fontFamily: fonts.regular, fontSize: 17, color: colors.grayInput },
-  inputLine: { borderBottomWidth: 1, borderBottomColor: colors.grayLine, paddingBottom: 8 },
-  input: { fontFamily: fonts.regular, fontSize: 17, color: colors.navy, paddingVertical: 2 },
-  hint: { fontFamily: fonts.regular, fontSize: 13, color: colors.grayText, marginTop: 6 },
+  placeholder: { fontFamily: fonts.regular, fontSize: 14, color: colors.grayInput, includeFontPadding: false },
+  inputLine: { borderBottomWidth: 1, borderBottomColor: colors.grayLine, paddingBottom: 4 },
+  input: { fontFamily: fonts.regular, fontSize: 14, color: colors.navy, paddingVertical: 0, includeFontPadding: false, textAlignVertical: 'bottom' },
+  hint: { fontFamily: fonts.regular, fontSize: 11, color: colors.grayText, marginTop: 6 },
 });
