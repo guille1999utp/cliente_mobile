@@ -15,9 +15,11 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.miprimeraapp.app",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
-        "foregroundImage": "./assets/android-icon-foreground.png"
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
       }
     },
     "web": {

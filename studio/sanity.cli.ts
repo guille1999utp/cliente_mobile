@@ -5,11 +5,13 @@ export default defineCliConfig({
     projectId: '2azx4it8',
     dataset: 'production'
   },
+  studioHost: 'simulator-pibank',
   deployment: {
     /**
      * Enable auto-updates for studios.
      * Learn more at https://www.sanity.io/docs/studio/latest-version-of-sanity#k47faf43faf56
      */
     autoUpdates: true,
+    appId: 'mntp0w8mwyi1nepyspp08pad',
   },
 })

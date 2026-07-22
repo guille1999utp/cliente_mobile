@@ -11,14 +11,18 @@ export const sanity = createClient({
 // Consultas GROQ: traen el primer documento de cada tipo (simulador de una sola cuenta/perfil)
 export const queries = {
   account: `*[_type == "account"][0]{
-    _id, holder, balance, detailBalance, number, masked, status, fullNumber
+    _id, holder, type, totalBalance, balance, detailBalance, number, masked, status, fullNumber,
+    limitDaily, limitDailyUsed, limitMonthly, limitMonthlyUsed
   }`,
   cdt: `*[_type == "cdt"][0]{ _id, title, promo }`,
   movements: `*[_type == "movement"] | order(order asc, _createdAt asc){
-    _id, day, month, year, category, description, amount, cents, balance, positive
+    _id, day, month, year, category, description, amount, cents, balance, positive, icon
   }`,
   profile: `*[_type == "profile"][0]{
     _id, items[]{ label, description, icon }
+  }`,
+  mailbox: `*[_type == "mailbox"][0]{
+    _id, items[]{ label, icon, badge }
   }`,
 };
 

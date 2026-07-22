@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { Feather, Ionicons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+import { MessageSquare } from 'lucide-react-native';
 import { colors, fonts } from '../theme';
 import TransferIcon from './TransferIcon';
 
@@ -17,7 +18,7 @@ export default function BottomTabBar({ navigation }) {
         <Text style={styles.label}>Transferencias</Text>
       </Pressable>
       <Pressable style={styles.item} onPress={go('Ayuda')}>
-        <Ionicons name="chatbubble-outline" size={24} color={colors.navy} />
+        <MessageSquare size={24} color={colors.navy} strokeWidth={1.8} />
         <Text style={styles.label}>Ayuda</Text>
       </Pressable>
     </View>

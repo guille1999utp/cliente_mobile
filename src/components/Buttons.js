@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: colors.white,
   },
-  outlineText: { fontFamily: fonts.bold, fontSize: 17, color: colors.navy },
+  outlineText: { fontFamily: fonts.semibold, fontSize: 14, color: colors.navy },
   cardPill: {
     borderWidth: 1.5,
     borderColor: colors.navy,
