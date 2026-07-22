@@ -15,7 +15,7 @@ export default function Header({ variant = 'title', title, onBack, onMenu, onMai
           <Logo size={26} circle={17} />
           <View style={styles.rightRow}>
             <Pressable hitSlop={10} onPress={onMail} style={styles.iconBtn}>
-              <Mail size={26} color={colors.navy} strokeWidth={1.8} />
+              <Mail size={26} color={colors.navy} strokeWidth={1.3} />
               {mailBadge != null && (
                 <View style={styles.mailBadge}>
                   <Text style={styles.mailBadgeText}>{mailBadge}</Text>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     textAlign: 'center',
-    fontFamily: fonts.semibold,
+    fontFamily: fonts.regular,
     fontSize: 22,
     color: colors.navy,
   },

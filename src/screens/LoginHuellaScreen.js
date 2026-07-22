@@ -29,7 +29,7 @@ export default function LoginHuellaScreen({ navigation }) {
         {/* Huella */}
         <Pressable style={styles.fingerWrap} onPress={() => navigation.replace('Inicio')}>
           <View style={styles.fingerCircle}>
-            <FingerprintPattern size={44} color={colors.navy} strokeWidth={1.6} />
+            <FingerprintPattern size={44} color={colors.navy} strokeWidth={1.3} />
           </View>
         </Pressable>
         <Text style={styles.fingerText}>Accede a Pibank con tu huella</Text>

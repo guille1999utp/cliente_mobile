@@ -53,7 +53,7 @@ export default function BuzonScreen({ navigation }) {
             return (
               <Pressable key={i} style={styles.row} onPress={() => {}}>
                 <View style={styles.iconWrap}>
-                  <Icon size={24} color={colors.navy} strokeWidth={1.8} />
+                  <Icon size={24} color={colors.navy} strokeWidth={1.3} />
                 </View>
                 <Text style={styles.label}>{it.label}</Text>
                 {it.badge != null && (

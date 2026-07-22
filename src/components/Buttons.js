@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  cardPillText: { fontFamily: fonts.bold, fontSize: 16, color: colors.navy },
+  cardPillText: { fontFamily: fonts.bold, fontSize: 13, color: colors.navy },
   pressed: { opacity: 0.75 },
 });
