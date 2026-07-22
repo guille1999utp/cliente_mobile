@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation }) {
       />
 
       <View style={styles.lastBar}>
-        <Text style={styles.lastText}>Última conexión: 05:14:18 09/02/2023</Text>
+        <Text style={styles.lastText}>Última conexión: {account?.lastConnection ?? '05:14:18 09/02/2023'}</Text>
       </View>
 
       {loading ? (

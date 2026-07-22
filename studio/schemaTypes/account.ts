@@ -6,6 +6,7 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({name: 'holder', title: 'Titular', type: 'string', description: 'Nombre para el saludo (ej: Alison)'}),
+    defineField({name: 'lastConnection', title: 'Última conexión', type: 'string', description: 'Texto de "Última conexión" en Inicio (ej: 05:14:18 09/02/2023)'}),
     defineField({name: 'type', title: 'Tipo de cuenta', type: 'string', description: 'Ej: Uni, Cuenta Pibank', initialValue: 'Cuenta Pibank'}),
     defineField({
       name: 'totalBalance',

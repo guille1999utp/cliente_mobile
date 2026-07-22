@@ -11,7 +11,7 @@ export const sanity = createClient({
 // Consultas GROQ: traen el primer documento de cada tipo (simulador de una sola cuenta/perfil)
 export const queries = {
   account: `*[_type == "account"][0]{
-    _id, holder, type, totalBalance, balance, detailBalance, number, masked, status, fullNumber,
+    _id, holder, lastConnection, type, totalBalance, balance, detailBalance, number, masked, status, fullNumber,
     limitDaily, limitDailyUsed, limitMonthly, limitMonthlyUsed
   }`,
   cdt: `*[_type == "cdt"][0]{ _id, title, promo }`,
