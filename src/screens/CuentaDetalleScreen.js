@@ -2,9 +2,9 @@ import { View, Text, ScrollView, StyleSheet, ActivityIndicator } from 'react-nat
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Feather } from '@expo/vector-icons';
 import {
-  ArrowRight,
+  CircleArrowRight,
   RotateCw,
-  Receipt,
+  Archive,
   ChevronRight,
   Plus,
 } from 'lucide-react-native';
@@ -23,8 +23,8 @@ function movementIcon(m) {
     else if (cat.includes('impuesto')) key = 'tax';
     else key = m.positive ? 'received' : 'emitted';
   }
-  const map = { received: ArrowRight, emitted: ArrowRight, interest: RotateCw, tax: Receipt };
-  return map[key] || ArrowRight;
+  const map = { received: CircleArrowRight, emitted: CircleArrowRight, interest: RotateCw, tax: Archive };
+  return map[key] || CircleArrowRight;
 }
 
 export default function CuentaDetalleScreen({ navigation }) {
@@ -100,8 +100,8 @@ export default function CuentaDetalleScreen({ navigation }) {
                   <Text style={styles.dateTop}>{m.day} {m.month}</Text>
                   <Text style={styles.dateBottom}>{m.year}</Text>
                 </View>
-                <View style={styles.iconCircle}>
-                  <Icon size={18} color={'rgba(0, 40, 74, 1)'} strokeWidth={1.3} />
+                <View style={styles.iconWrap}>
+                  <Icon size={20} color={'rgba(0, 40, 74, 1)'} strokeWidth={1.3} />
                 </View>
                 <View style={styles.midCol}>
                   <Text style={styles.category}>{m.category}</Text>
@@ -134,12 +134,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#FEEA00'
    },
   sideBoxLeft: {
-    backgroundColor: 'white', width: 25, height: 190,
+    backgroundColor: 'white', width: 27, height: 190,
     borderTopRightRadius: 5, borderBottomRightRadius: 5,
     alignItems: 'center', justifyContent: 'center',
   },
   sideBoxRight: {
-    backgroundColor: 'white', width: 25, height: 190,
+    backgroundColor: 'white', width: 27, height: 190,
     borderTopLeftRadius: 5, borderBottomLeftRadius: 5,
     alignItems: 'center', justifyContent: 'center',
   },
@@ -178,12 +178,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'center', paddingVertical: 14,
     paddingHorizontal: 20, borderBottomWidth: 1, borderBottomColor: colors.grayLine,
   },
-  dateCol: { width: 58 },
+  dateCol: { width: 40 },
   dateTop: { fontFamily: fonts.medium, fontSize: 10, color: 'rgba(0, 40, 74, 1)' },
   dateBottom: { fontFamily: fonts.regular, fontSize: 8, color: 'rgba(0, 40, 74, 1)', left:6 },
-  iconCircle: {
-    width: 38, height: 38, borderRadius: 19, borderWidth: 1, borderColor: 'rgba(0, 40, 74, 1)',
-    alignItems: 'center', justifyContent: 'center', marginRight: 10,
+  iconWrap: {
+    width: 30,marginBottom:14, alignItems: 'center', justifyContent: 'center', marginRight: 6,
   },
   midCol: { flex: 1, paddingRight: 8 },
   category: { fontFamily: fonts.semibold, fontSize: 14, color: 'rgba(0, 40, 74, 1)', letterSpacing: -0.5 },
